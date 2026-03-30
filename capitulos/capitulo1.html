@@ -1,89 +1,89 @@
-<h2 id="sec-1-0" class="capitulo"> CHAPTER 1: BASIC GEOMETRY INN \(  \mathbf{  \mathbb{N}_0 \times \mathbb{N}_0  } \)  </h2>
+<h2 id="sec-1-0" class="capitulo"> CHAPTER 1: BASIC GEOMETRY IN \(  \mathbf{  \mathbb{N}_0 \times \mathbb{N}_0  } \)   </h2>
 
-    <p class="capitulo-subtitulo"> SHAPING THE SUPPORT OF COUNTEREXAMPLES IN \(  K[x, y] \) </p>
-    <p class="contenido_teoria">
-    In this chapter we first give a detailed description of the geometry of the support of polynomials
-    in \( K[x,y] \) and the relation with the plane Jacobian conjecture. Then we introduce our main tools:
-    directions and leading terms \( \ell_{\rho\sigma}(P) \) corresponding to these directions (see Definition 
-    <span class="box">1.4.2</span>), the transformation of the shape of the support by certain automorphisms 
-    of \( K[x,y] \), and the very important element \( F \). 
+<p class="capitulo-subtitulo"> SHAPING THE SUPPORT OF COUNTEREXAMPLES IN \(  K[x, y] \) </p>
+<p class="contenido_teoria">
+In this chapter we first give a detailed description of the geometry of the support of polynomials
+in \( K[x,y] \) and the relation with the plane Jacobian conjecture. Then we introduce our main tools:
+directions and leading terms \( \ell_{\rho\sigma}(P) \) corresponding to these directions (see Definition 
+<span class="box">1.4.2</span>), the transformation of the shape of the support by certain automorphisms 
+of \( K[x,y] \), and the very important element \( F \). 
 
-    The main result of this chapter is that if the Jacobian conjecture is false, then
-    \( B \geq 9 \), where 
-    \( B := \min\bigl(\gcd(\deg(P),\deg(Q))\bigr) \), 
-    and \( (P,Q) \) runs on the counterexamples. This result
-    was already proven by Nagata in [4]. 
+The main result of this chapter is that if the Jacobian conjecture is false, then
+\( B \geq 9 \), where 
+\( B := \min\bigl(\gcd(\deg(P),\deg(Q))\bigr) \), 
+and \( (P,Q) \) runs on the counterexamples. This result
+was already proven by Nagata in [4]. 
 
-    In order to prove \( B \geq 9 \), we consider a counterexample \( (P,Q) \)
-    such that \( B = \gcd(\deg(P),\deg(Q)) \). We transform this counterexample into a standard 
-    \( (m,n) \)-pair in \( K[x,y] \) (see Definition <span class="box">1.7.2</span>). 
+In order to prove \( B \geq 9 \), we consider a counterexample \( (P,Q) \)
+such that \( B = \gcd(\deg(P),\deg(Q)) \). We transform this counterexample into a standard 
+\( (m,n) \)-pair in \( K[x,y] \) (see Definition <span class="box">1.7.2</span>). 
 
-    For the transformed pair there exist \( (\rho,\sigma) \)-homogeneous elements
-    (see Definition <span class="box">1.4.4</span>) \( R \) and \( F \) satisfying very strong conditions 
-    (see Theorem <span class="box">1.8.1</span>). The supports of \( R \) and \( F \) satisfying these conditions, 
-    with minimum \( \deg(R) \), are shown in the Figure <span class="box">1.1</span>.
-    </p>
+For the transformed pair there exist \( (\rho,\sigma) \)-homogeneous elements
+(see Definition <span class="box">1.4.4</span>) \( R \) and \( F \) satisfying very strong conditions 
+(see Theorem <span class="box">1.8.1</span>). The supports of \( R \) and \( F \) satisfying these conditions, 
+with minimum \( \deg(R) \), are shown in the Figure <span class="box">1.1</span>.
+</p>
 
-    <figure class="imagen">
-    <img src="img/img1.png" alt="Figure 1.1: Minimal possible support of F and R">
-    <figcaption>Figure 1.1: Minimal possible support of F and R</figcaption>
-    </figure>
+<figure class="imagen">
+<img src="img/img1.png" alt="Figure 1.1: Minimal possible support of F and R">
+<figcaption>Figure 1.1: Minimal possible support of F and R</figcaption>
+</figure>
 
-    <p class="contenido_teoria">
-    \(\deg(R) = 9 \), which implies \(B \geq 9 \). The key point of the proof is the transformation of the minimal 
-    counterexample into a standard \( (m,n) \)-pair, which needs the most amount of work. This transformation is carried out using automorphisms of the algebra \( K[x,y] \), which alter the support of the polynomials—subsets of \( \mathbb{N}_0 \times \mathbb{N}_0 \)—through basic geometric operations on the plane. 
+<p class="contenido_teoria">
+\(\deg(R) = 9 \), which implies \(B \geq 9 \). The key point of the proof is the transformation of the minimal 
+counterexample into a standard \( (m,n) \)-pair, which needs the most amount of work. This transformation is carried out using automorphisms of the algebra \( K[x,y] \), which alter the support of the polynomials—subsets of \( \mathbb{N}_0 \times \mathbb{N}_0 \)—through basic geometric operations on the plane. 
 
-    The shaping of the support depends on the multiplicity of the linear factors in the polynomials \( \ell_{\rho\sigma}(P) \), which are strongly conditioned by the multiplicity of these linear factors in the \( (\rho,\sigma) \)-homogeneous polynomial \( F \) (see Proposition 1.5.5). 
+The shaping of the support depends on the multiplicity of the linear factors in the polynomials \( \ell_{\rho\sigma}(P) \), which are strongly conditioned by the multiplicity of these linear factors in the \( (\rho,\sigma) \)-homogeneous polynomial \( F \) (see Proposition 1.5.5). 
 
-    This underlines the importance of the element \( F \), which is the crucial new tool of our whole approach.
-    </p>
+This underlines the importance of the element \( F \), which is the crucial new tool of our whole approach.
+</p>
+
+<h3 id="sec-1-1">1.1 Polynomials in two variables and their support</h3>
+
+<p class="contenido_teoria">
+Polynomials in two variables with coefficients in a field \( K \) are expressions of the form
+\[P = P(x,y) = \sum_{i,j \in \mathbb{N}_0} a_{ij} x^i y^j,\] 
+with each \( a_{ij} \in K \) and only finitely many \( a_{ij} \neq 0 \). For example, 
+\[P = 3x^3 + 2x^2 + 4xy + 7y^2 + 2y - 8\] 
+has \( a_{30} = 3 \), \( a_{20} = 2 \), \( a_{11} = 4 \), \( a_{02} = 7 \), \( a_{01} = 2 \), \( a_{00} = -8 \) and \( a_{ij} = 0 \), for all other indices \( (i,j) \). By definition, the <i>support</i> of a polynomial 
+\( P = \sum_{i,j \in \mathbb{N}_0} a_{ij} x^i y^j \), is the set
+
+\[\operatorname{Supp}(P) := \{(i,j) : a_{ij} \neq 0\},\]
+
+which is a finite set contained in first quadrant of the plane. If we consider the polynomial \( P \) as a function \( P\colon \mathbb{N}_0 \times \mathbb{N}_0 \to K \), given by \( P(i,j) := a_{ij} \), then our definition of support coincides with the usual definition of the support of a function, which is the subset of the domain consisting of the elements which are not mapped to zero. For example, the support of the polynomial P above is shown in Figure 1.2.
+</p>
+<figure class="imagen">
+<img src="img/img2.png" alt="Figure 1.2: Support of P">
+<figcaption>Figure 1.2: Support of P</figcaption>
+</figure>
+<p class="contenido_teoria">
+The algebra of polynomials in two variables over the field \( K \) is called \( K[x,y] \). It is a vector space over \( K \) with basis 
+\( \{x^i y^j : (i,j) \in \mathbb{N}_0^2\} \). The multiplication is given by
+
+
+\[x^i y^j \cdot x^k y^l := x^{i+k} y^{j+l}\]
+
+
+on elements of the basis, and then extended by bilinearity to arbitrary polynomials. If one of \( P \) or \( Q \) is a monomial, then the support of the product is the sum of the supports. Here we define the <i>sum</i> and the <i>difference</i> of two subsets \( A \) and \( B \) of \( \mathbb{R}^2 \), by
+
+\[
+A + B := \{a + b : a \in A \text{ and } b \in B\} 
+\quad \text{and} \quad 
+A - B := \{a - b : a \in A \text{ and } b \in B\},
+\]
+
+respectively. For example, if
+
+\[
+P = 3x^3 + 2x^2 + 4xy + 7y^2 + 2y - 8 
+\quad \text{and} \quad 
+Q = x^3 y,
+\]
+</p>
+
+<p class="contenido_teoria">
     
-    <h3 id="sec-1-1">1.1 Polynomials in two variables and their support</h3>
-
-    <p class="contenido_teoria">
-    Polynomials in two variables with coefficients in a field \( K \) are expressions of the form
-    \[P = P(x,y) = \sum_{i,j \in \mathbb{N}_0} a_{ij} x^i y^j,\] 
-    with each \( a_{ij} \in K \) and only finitely many \( a_{ij} \neq 0 \). For example, 
-    \[P = 3x^3 + 2x^2 + 4xy + 7y^2 + 2y - 8\] 
-    has \( a_{30} = 3 \), \( a_{20} = 2 \), \( a_{11} = 4 \), \( a_{02} = 7 \), \( a_{01} = 2 \), \( a_{00} = -8 \) and \( a_{ij} = 0 \), for all other indices \( (i,j) \). By definition, the <i>support</i> of a polynomial 
-    \( P = \sum_{i,j \in \mathbb{N}_0} a_{ij} x^i y^j \), is the set
-
-    \[\operatorname{Supp}(P) := \{(i,j) : a_{ij} \neq 0\},\]
-
-    which is a finite set contained in first quadrant of the plane. If we consider the polynomial \( P \) as a function \( P\colon \mathbb{N}_0 \times \mathbb{N}_0 \to K \), given by \( P(i,j) := a_{ij} \), then our definition of support coincides with the usual definition of the support of a function, which is the subset of the domain consisting of the elements which are not mapped to zero. For example, the support of the polynomial P above is shown in Figure 1.2.
-    </p>
-    <figure class="imagen">
-    <img src="img/img2.png" alt="Figure 1.2: Support of P">
-    <figcaption>Figure 1.2: Support of P</figcaption>
-    </figure>
-    <p class="contenido_teoria">
-    The algebra of polynomials in two variables over the field \( K \) is called \( K[x,y] \). It is a vector space over \( K \) with basis 
-    \( \{x^i y^j : (i,j) \in \mathbb{N}_0^2\} \). The multiplication is given by
-
-
-    \[x^i y^j \cdot x^k y^l := x^{i+k} y^{j+l}\]
-
-
-    on elements of the basis, and then extended by bilinearity to arbitrary polynomials. If one of \( P \) or \( Q \) is a monomial, then the support of the product is the sum of the supports. Here we define the <i>sum</i> and the <i>difference</i> of two subsets \( A \) and \( B \) of \( \mathbb{R}^2 \), by
-
-    \[
-    A + B := \{a + b : a \in A \text{ and } b \in B\} 
-    \quad \text{and} \quad 
-    A - B := \{a - b : a \in A \text{ and } b \in B\},
-    \]
-
-    respectively. For example, if
-
-    \[
-    P = 3x^3 + 2x^2 + 4xy + 7y^2 + 2y - 8 
-    \quad \text{and} \quad 
-    Q = x^3 y,
-    \]
-    </p>
-
-    <p class="contenido_teoria">
-        
-    </p>
+</p>
 <hr>
 <p>CLICK PARA GRAFICAR LA FUNCIóN</p>
 <p class="ecuacion" onclick="abrirGrafica('x^2 - 4*x + 3')">
@@ -95,14 +95,16 @@
 <hr>
 
 <div class="ejemplo">
-    <p class="contenido_teoria"><strong>Ejemplo:</strong> Resuelve la ecuación</p>
+    <p class="contenido_caja">
+    <strong>Ejemplo 1:</strong> Resuelve la ecuación 
+    </p>
 
     <p class="ecuacion">
     \[3x + 4 = 2x - 5\]
     </p>
 
     <p class="toggle-sol" onclick="toggleSolucion(this)">
-        Mostrar solución ▼
+        Mostrar Solución ▼
     </p>
 
     <div class="solucion">
@@ -123,6 +125,6 @@
 
 
 <h3 id="sec-1-4">1.4 Directions, leading terms, starting points and end points</h3>
-<p class="contenido_teoria">Contenido...</p>
+<p class="contenido_teoria">Contenido... yy</p>
 
 
