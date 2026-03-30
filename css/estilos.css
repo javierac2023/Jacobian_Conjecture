@@ -1,0 +1,212 @@
+body {
+    font-family: Merriweather;
+    margin: 20px;
+}
+/* NAVBAR GENERAL */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(to right,#6E1E05, #B3340C, #F7521E);
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* LOGO */
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Merriweather", serif;   /* PT Sans  ,   Merriweather  */  
+}
+
+/* CONTENEDOR DE BOTONES */
+.menu button {
+    background: transparent;
+    border: none;
+    color: white;
+    margin-left: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+
+
+}
+
+/* EFECTO HOVER BONITO */
+.menu button::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+.menu button:hover::after {
+    width: 100%;
+}
+
+/* HOVER SUAVE */
+.menu button:hover {
+    opacity: 0.8;
+}
+
+
+
+
+.navbar button {
+    font-family: "Merriweather", serif;
+    color: white;
+    background: none;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* CONTENEDOR */
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+/* OCULTO POR DEFECTO */
+.dropdown-content {
+    display: none; /* 🔥 clave */
+    position: absolute;
+    background-color: #DB3A09;
+    min-width: 500px;      /* ANCHO DEL MENU DESPLEGABLE */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    font-size: 20px;
+}
+
+/* HOVER */
+.dropdown:hover .dropdown-content {
+    display: block; /*  aparece solo al pasar el mouse */
+}
+
+.dropdown-content a {
+    font-family: "Merriweather", serif;
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+/*  ROJO AL CAPITULO INICIAL */
+.capitulo {
+    color: #B3340C;
+    margin-top: 30px;
+
+}
+
+.capitulo-subtitulo {
+    color: #B3340C;
+    font-weight: bold;
+    margin-top: 30px;
+    width: 90%;      /* solo 90% de la pantalla */
+    margin-left: 5%;  /* 20% desde la izquierda */
+    font-size: 24px;
+
+}
+
+.contenido_teoria{
+    width: 90%;      /* solo 80% de la pantalla */
+    margin-left: 5%;  /* 20% desde la izquierda */
+    font-size: 22px;
+    line-height: 1.4;
+    font-family: "Latin Modern Roman", serif;
+    text-align: justify;
+}
+h3{
+    width: 90%;      /* solo 80% de la pantalla */
+    margin-left: 5%;  /* 20% desde la izquierda */
+    font-size: 24px;
+}
+
+
+.ecuacion {
+    cursor: pointer;
+    color: blue;
+    font-size: 22px;
+    color: #B3340C;
+}
+
+.ejemplo {
+    border: 2px solid #b44;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #FFEAE0;
+    margin-top: 20px;
+}
+
+/* Texto tipo link */
+.toggle-sol {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Solución oculta */
+.solucion {
+    display: none;
+    margin-top: 10px;
+}
+
+/* PARRAFOS */
+
+
+.preface1 {
+    width: 60%;      /* solo 60% de la pantalla */
+    margin-left: 20%;  /* 20% desde la izquierda + 60% del centro es 80% ,y deja 20 */
+    font-family: "Latin Modern Roman", serif;
+}
+.preface1_titulo {
+    font-weight: bold;   /* negrita */
+    font-size: 30px;     /* más grande */
+    text-align: justify;
+}
+
+.preface1_texto {
+    font-size: 22px;     /* normal */
+    line-height: 1.4;  /* espacio de interlineado  1.6 el tamano de la fuente*/
+    text-align: justify;
+
+}
+
+.preface2 {
+    width: 40%;      /* solo 40% de la pantalla */
+    margin-left: 60%;  /* 20% desde la izquierda */
+    font-size: 22px;
+    line-height: 1.4;
+    font-family: "Latin Modern Roman", serif;
+    text-align: justify;
+}
+
+
+
+/* IMAGENES */
+.imagen {
+    max-width: 100%;
+    height: auto;
+    text-align: center;   /* centra todo */
+    margin: 30px 0;
+}
+.imagen img {
+    max-width: 100%;      /* no se salga de la pantalla */
+    height: auto;
+    width: 20vw;
+}
+.imagen figcaption {
+    font-size: 20px;
+    color: black;
+    margin-top: 8px;
+    font-style: italic;   /* estilo tipo libro */
+}
