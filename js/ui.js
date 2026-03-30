@@ -42,7 +42,7 @@ function irASeccion(url, id) {
             const contenedor = document.getElementById("contenido");
             contenedor.innerHTML = html;
 
-            // 🔥 REPROCESAR LATEX
+            //  REPROCESAR LATEX
             if (window.MathJax) {
                 MathJax.typesetPromise();
             }
