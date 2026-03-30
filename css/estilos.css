@@ -1,41 +1,63 @@
+:root {
+    --color-fuerte: #872C26;
+    --color-medio: #A9372F;
+    --color-claro: #ED4C45;
+    --color-fondo: #FFE8E5;
+}
+html {
+    scroll-padding-top: 80px; /* altura aproximada de tu navbar  asi se ven clas subsecccioens a lhacer clik*/
+}
 body {
     font-family: Merriweather;
-    margin: 20px;
+    margin: 0px;   /* bordes del cuerpo */
+    padding-top: 80px; /* deja espacio debajo del navbar fijo */
 }
+
+
 /* NAVBAR GENERAL */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background: linear-gradient(to right,#6E1E05, #B3340C, #F7521E);
+    padding: 10px 10px;
+    background: linear-gradient(to right,var(--color-fuerte), var(--color-medio), var(--color-claro));
     color: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    position: fixed; /*  esto la fija */
+    top: 0;          /* siempre arriba */
+    left: 0;         /* alineada a la izquierda */
+    width: 100%;     /* ocupa todo el ancho */
+    z-index: 9999;   /* encima de todo */
+
 }
 
 /* LOGO */
 .logo {
-    font-size: 30px;
+    font-size: 26px;
     font-weight: bold;
     font-family: "Merriweather", serif;   /* PT Sans  ,   Merriweather  */  
+    margin-left: 20px;  /* margen izquierdo */
 }
 
 /* CONTENEDOR DE BOTONES */
-.menu button {
+.menu {
+    display: flex;
+    flex-wrap: wrap; /* permite que los elementos pasen a otra línea si no caben */
+    gap: 10px;       /* separación entre elementos */
+    align-items: center;
+    margin-right: 20px; /* margen derecho */
+}
+.menu a {
     background: transparent;
     border: none;
     color: white;
     margin-left: 15px;
-    font-size: 16px;
     cursor: pointer;
     position: relative;
     padding: 5px;
-
-
 }
 
 /* EFECTO HOVER BONITO */
-.menu button::after {
+.menu a::after {
     content: "";
     position: absolute;
     width: 0%;
@@ -46,44 +68,51 @@ body {
     transition: 0.3s;
 }
 
-.menu button:hover::after {
+.menu a:hover::after {
     width: 100%;
 }
 
 /* HOVER SUAVE */
-.menu button:hover {
+.menu a:hover {
     opacity: 0.8;
 }
 
 
 
 
-.navbar button {
+.navbar a {
     font-family: "Merriweather", serif;
     color: white;
     background: none;
     border: none;
     margin-right: 10px;
     cursor: pointer;
-    font-size: 20px;
+    
+
 }
 
 /* CONTENEDOR */
 .dropdown {
     position: relative;
     display: inline-block;
+    font-size: 18px;    /* CAPITULOS O CHAPTERS*/
+
 
 }
 
-/* OCULTO POR DEFECTO */
-.dropdown-content {
-    display: none; /* 🔥 clave */
+/* OCULTO POR DEFECTO  AQUI SUBSECCIONES*/
+.dropdown-content {  
+    top: 28px;   /* NO SEPARAR DEMASIADO*/
+    display: none; /*  clave */
     position: absolute;
-    background-color: #DB3A09;
+    background-color: var(--color-medio);
     min-width: 500px;      /* ANCHO DEL MENU DESPLEGABLE */
     box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
     z-index: 1000;
-    font-size: 20px;
+    font-size: 14px;
+    border-radius: 8px; /* esquinas redondeadas */
+    overflow: hidden;    /* asegura que los bordes redondeados funcionen con el contenido */
+
 }
 
 /* HOVER */
@@ -97,17 +126,23 @@ body {
     padding: 10px;
     display: block;
     text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* fondo semitransparente */
+    padding-left: 20px;  /* pequeño “desplazamiento” al pasar el mouse */
 }
 
 /*  ROJO AL CAPITULO INICIAL */
 .capitulo {
-    color: #B3340C;
+    color: var(--color-medio);
     margin-top: 30px;
+    margin-left: 5%;  /* 20% desde la izquierda */
 
 }
 
 .capitulo-subtitulo {
-    color: #B3340C;
+    color: var(--color-medio);
     font-weight: bold;
     margin-top: 30px;
     width: 90%;      /* solo 90% de la pantalla */
@@ -124,6 +159,14 @@ body {
     font-family: "Latin Modern Roman", serif;
     text-align: justify;
 }
+.contenido_caja{
+    width: 100%;      /* solo 80% de la pantalla */
+    margin-left: 0%;  /* 20% desde la izquierda */
+    font-size: 22px;
+    line-height: 1.4;
+    font-family: "Latin Modern Roman", serif;
+    text-align: justify;
+}
 h3{
     width: 90%;      /* solo 80% de la pantalla */
     margin-left: 5%;  /* 20% desde la izquierda */
@@ -133,17 +176,19 @@ h3{
 
 .ecuacion {
     cursor: pointer;
-    color: blue;
+
     font-size: 22px;
-    color: #B3340C;
+    color: var(--color-medio);
 }
 
 .ejemplo {
-    border: 2px solid #b44;
+    border: 2px solid var(--color-medio);
     border-radius: 10px;
     padding: 15px;
-    background-color: #FFEAE0;
-    margin-top: 20px;
+    background-color: var(--color-fondo);
+    margin-top: 10px;
+    width: 90%;      /* solo 80% de la pantalla */
+    margin-left: 5%;  /* 20% desde la izquierda */
 }
 
 /* Texto tipo link */
@@ -183,7 +228,7 @@ h3{
 
 .preface2 {
     width: 40%;      /* solo 40% de la pantalla */
-    margin-left: 60%;  /* 20% desde la izquierda */
+    margin-left: 50%;  /* 20% desde la izquierda */
     font-size: 22px;
     line-height: 1.4;
     font-family: "Latin Modern Roman", serif;
