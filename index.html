@@ -20,8 +20,7 @@
 
         <!-- DROPDOWN CORRECTO -->
         <div class="dropdown">
-            <button>Chapter 1</button>
-
+            <a onclick="irASeccion('capitulos/capitulo1.html','sec-1-0')">Chapter 1</a>
             <div class="dropdown-content">
                 <a onclick="irASeccion('capitulos/capitulo1.html','sec-1-1')">1.1 Polynomials in two variables and their support</a>
                 <a onclick="irASeccion('capitulos/capitulo1.html','sec-1-2')">1.2 The Jacobian determinant and its support</a>
@@ -31,9 +30,17 @@
         </div>
 
         <!-- LOS DEMÁS IGUAL -->
-        <button onclick="cargarPagina('capitulos/capitulo2.html')">Chapter 2</button>
-        <button onclick="cargarPagina('capitulos/capitulo3.html')">Chapter 3</button>
-        <button onclick="abrirPrimos()">Algoritmo prueba</button>
+        <div class="dropdown">
+            <a onclick="irASeccion('capitulos/capitulo2.html','sec-2-0')">Chapter 2</a>
+        </div>
+        <div class="dropdown">
+        <a onclick="irASeccion('capitulos/capitulo3.html','sec-3-0')">Chapter 3</a>
+        </div>
+        <div class="dropdown">
+        <a onclick="abrirPrimos()">Algoritmo</a>
+        </div>
+      
+        
 
     </div>
 </nav>
@@ -52,7 +59,8 @@
     the algebraic results, which often gets lost in the usual format of scientific articles, which have the
     requirement to be very concise. The main part of the content of the book is [1].
     </p>
-
+    <br>
+    <br>
     <p class="preface2">
     "The underlying strategy is the minimal counterexample approach. We assume the Jacobian conjecture is false and derive properties which a minimal counterexample must satisfy. The ultimate goal is either a contradiction (proving the conjecture) or an actual counterexample." 
     </p>
