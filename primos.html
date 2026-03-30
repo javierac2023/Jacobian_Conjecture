@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Primos con Python</title>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+</head>
+<!--  Puedes usar directamente:
+
+NumPy
+Pandas
+Matplotlib
+SciPy
+SymPy
+scikit-learn
+ -->.
+<body>
+
+<h2>Primos usando Python</h2>
+
+<input type="number" id="numero">
+<button onclick="calcular()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+let pyodide;
+
+async function iniciarPython() {
+    pyodide = await loadPyodide();
+}
+
+iniciarPython();
+
+async function calcular() {
+    let n = document.getElementById("numero").value;
+
+    let codigo = `
+primos = []
+for i in range(2, ${n}+1):
+    es_primo = True
+    for j in range(2, int(i**0.5)+1):
+        if i % j == 0:
+            es_primo = False
+            break
+    if es_primo:
+        primos.append(i)
+
+primos
+`;
+
+    let resultado = await pyodide.runPythonAsync(codigo);
+
+    document.getElementById("resultado").innerText = resultado;
+}
+</script>
+
+</body>
+</html>

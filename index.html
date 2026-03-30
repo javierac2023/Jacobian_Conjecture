@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Book in progress</title>
+<link rel="icon" href="img/favicon.ico">
+<link rel="stylesheet" href="css/estilos.css">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">The plane Jacobian Conjecture from a geometric viewpoint</div>
+
+    <div class="menu">
+
+        <!-- DROPDOWN CORRECTO -->
+        <div class="dropdown">
+            <button>Chapter 1</button>
+
+            <div class="dropdown-content">
+                <a onclick="irASeccion('capitulos/capitulo1.html','sec-1-1')">1.1 Polynomials in two variables and their support</a>
+                <a onclick="irASeccion('capitulos/capitulo1.html','sec-1-2')">1.2 The Jacobian determinant and its support</a>
+                <a onclick="irASeccion('capitulos/capitulo1.html','sec-1-3')">1.3 Plane Jacobian conjecture and small examples</a>
+                <a onclick="irASeccion('capitulos/capitulo1.html','sec-1-3')">1.4 Directions, leading terms, starting points and end points</a>
+            </div>
+        </div>
+
+        <!-- LOS DEMÁS IGUAL -->
+        <button onclick="cargarPagina('capitulos/capitulo2.html')">Chapter 2</button>
+        <button onclick="cargarPagina('capitulos/capitulo3.html')">Chapter 3</button>
+        <button onclick="abrirPrimos()">Algoritmo prueba</button>
+
+    </div>
+</nav>
+
+<div id="contenido">
+
+
+    <p class="preface1 preface1_titulo">
+    Preface: 
+    </p>
+    <p class="preface1 preface1_texto">
+    In this book we will present a detailed introduction to the geometric method exposed in various
+    articles we have written about the Jacobian Conjecture. The method is based on elementary
+    geometry in the euclidean plane, but now we feel that the quantity of results need a structured
+    and detailed exposition. In particular, the book will allow to illustrate the basic geometry behind
+    the algebraic results, which often gets lost in the usual format of scientific articles, which have the
+    requirement to be very concise. The main part of the content of the book is [1].
+    </p>
+
+    <p class="preface2">
+    "The underlying strategy is the minimal counterexample approach. We assume the Jacobian conjecture is false and derive properties which a minimal counterexample must satisfy. The ultimate goal is either a contradiction (proving the conjecture) or an actual counterexample." 
+    </p>
+    <p class="preface2">
+    Raymond Heitmann
+    </p>
+
+</div>
+
+<script src="js/ui.js"></script>
+
+</body>
+</html>
